@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">iLoveYouKsu</string>
+    <string name="action_settings">Settings</string>
+    <string name="love_pic_description">****;)</string>
+    <string name="prev_button_layout">Prev</string>
+    <string name="next_button_layout">Next!</string>
+    <string name="love_note_1">I love you, honey! ****)</string>
+    <string name="love_note_2">Because you are the best! ****)</string>
+    <string name="love_note_3">And I miss you every day! ****)</string>
+
+</resources>
