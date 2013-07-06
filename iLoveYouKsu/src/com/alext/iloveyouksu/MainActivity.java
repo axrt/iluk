@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.*;
 
 public class MainActivity extends Activity {
 
@@ -18,7 +19,7 @@ public class MainActivity extends Activity {
 	private Button mNextButton;
 	private int mCurrentLoveNoteNumber;
 	private TextView mTextView;
-
+    private ImageView mLoveView;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,6 +29,8 @@ public class MainActivity extends Activity {
 				getString(R.string.love_note_1),
 				getString(R.string.love_note_2),
 				getString(R.string.love_note_3) }));
+		this.mLoveView=(ImageView)findViewById(R.id.love_image_view);
+		this.mLoveView.setBackgroundResource(R.drawable.heart);
 		this.mTextView=(TextView)findViewById(R.id.love_text_view);
 		this.mTextView.setText(this.mLoveNotes.get(0));
 		this.mPrevButton=(Button)findViewById(R.id.prev_button_layout);
