@@ -15,6 +15,7 @@ import android.widget.*;
 public class MainActivity extends Activity {
 
 	private List<String> mLoveNotes;
+	private List<Integer> mDrawableIds;
 	private Button mPrevButton;
 	private Button mNextButton;
 	private int mCurrentLoveNoteNumber;
@@ -29,6 +30,7 @@ public class MainActivity extends Activity {
 				getString(R.string.love_note_1),
 				getString(R.string.love_note_2),
 				getString(R.string.love_note_3) }));
+	    this.mDrawableIds=new ArrayList<Integer>(Arrays.asList(new int[]{R.drawable.heart,R.drawable.kiss1,R.drawable.kiss2}));			
 		this.mLoveView=(ImageView)findViewById(R.id.love_image_view);
 		this.mLoveView.setBackgroundResource(R.drawable.heart);
 		this.mTextView=(TextView)findViewById(R.id.love_text_view);
@@ -39,6 +41,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				mTextView.setText(mLoveNotes.get(getPreviousLoveNoteId()));
+				mLoveView.setBackgroundResource(mDrawableIds.get(mCurrentLoveNoteNumber));
 			}
 		});
 		this.mNextButton=(Button)findViewById(R.id.next_button);
@@ -47,6 +50,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				mTextView.setText(mLoveNotes.get(getNextLoveNoteId()));	
+				mLoveView.setBackgroundResource(mDrawableIds.get(mCurrentLoveNoteNumber));    
 			}
 		});
 	}
