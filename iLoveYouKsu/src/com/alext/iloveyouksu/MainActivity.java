@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
 				getString(R.string.love_note_1),
 				getString(R.string.love_note_2),
 				getString(R.string.love_note_3) }));
-	    this.mDrawableIds=new ArrayList<Integer>(Arrays.asList(new int[]{R.drawable.heart,R.drawable.kiss1,R.drawable.kiss2}));			
+	    this.mDrawableIds=new ArrayList<Integer>(Arrays.asList(new Integer[]{R.drawable.heart,R.drawable.kiss1,R.drawable.kiss2}));			
 		this.mLoveView=(ImageView)findViewById(R.id.love_image_view);
 		this.mLoveView.setBackgroundResource(R.drawable.heart);
 		this.mTextView=(TextView)findViewById(R.id.love_text_view);
